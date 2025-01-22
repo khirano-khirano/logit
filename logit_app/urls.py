@@ -1,7 +1,7 @@
-# urls.py
+# logit_app/urls.py
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('index/', views.index, name='index'),
+   path('', views.index, name='index'), # ルート URL に views.index を対応させる
 ]
