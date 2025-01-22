@@ -1,0 +1,30 @@
+body {
+  background-color: #D3DEF1;
+}
+td {text-align: center}
+.HeaderTable thead {
+border-collapse:collapse;
+}
+
+.HeaderTable thead tr:nth-child(1) {
+background-color:#0094ff;
+}
+
+.HeaderTable thead tr:nth-child(1) td {
+color:white;
+}
+
+.HeaderTable thead tr td {
+border: 1px solid #0094ff;
+}
+.form-group {
+  margin-bottom: 15px; /* 下マージン */
+}
+
+input[type="radio"] {
+  margin-right: 5px; /* ラジオボタンの右マージン */
+}
+
+label {
+  margin-right: 15px; /* ラベルの右マージン */
+}

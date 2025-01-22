@@ -1,0 +1,19 @@
+.HeaderTable {
+    border-collapse: collapse;
+    width: 750px;
+    margin: 20px auto;
+  }
+  
+  .HeaderTable th, .HeaderTable td {
+    border: 1px solid #0094ff;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .HeaderTable th {
+    background-color: #0094ff;
+    color: white;
+  }
+  body {
+    background-color: #D3DEF1;
+  }

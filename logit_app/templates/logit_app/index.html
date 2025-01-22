@@ -1,0 +1,88 @@
+<!-- index.html -->
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <title>回帰分析 Web App</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <h1>回帰分析 Web App</h1>
+    <p>分析したいファイルと回帰分析の種類を選択してください。(csv UTF-8(コンマ区切り)にしてください)</p>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="radio" id="logistic" name="analysis_type" value="logistic" checked>
+            <label for="logistic">ロジスティック回帰分析</label>
+            <input type="radio" id="linear" name="analysis_type" value="linear">
+            <label for="linear">重回帰分析</label>
+        </div>
+        <div class="form-group">
+            <input type="file" name="csv_file" accept=".csv">
+        </div>
+        <button type="submit" id="submit-button" >Upload</button>
+    </form>
+    <div>
+        <p>
+            アップロードするデータは以下のようにしてください！
+        </p>
+    </div>
+    <p> </p>
+    <table width="750" border="1">
+        <thead>
+            <tr>
+                <td>目的変数</td>
+                <td>説明変数1</td>
+                <td>説明変数2</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>2値のみ(ロジスティック回帰分析)</td>
+                <td>連続値でも2値でも可</td>
+                <td>連続値でも2値でも可</td>
+            </tr>
+            <tr>
+              <td>連続値(重回帰分析)</td>
+              <td>連続値でも2値でも可</td>
+              <td>連続値でも2値でも可</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <p>      </p>
+    <h2>
+        例1
+    </h2>
+    <table width="750" border="1" class="HeaderTable">
+        <thead>
+            <tr>
+                <td>性別</td>
+                <td>国語の評価</td>
+                <td>数学の評価</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>0</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>4</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+        
+    </table>
+    <p>
+        ※説明変数の数はいくつでも可能です。
+    </p>
+    <p>
+        ※欠損値などの処理はアップロード前に行ってください。
+    </p>
+    <script src="{% static 'js/index.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+.HeaderTable {
+  border-collapse:collapse;
+}
+
+.HeaderTable tr:nth-child(1) {
+  background-color:#0094ff;
+}
+
+.HeaderTable tr:nth-child(1) td {
+  color:white;
+}
+
+.HeaderTable tr td {
+  border: 1px solid #0094ff;
+}
+.hr1 {
+  border-top: 3px solid red; /* 赤 */
+}
+body {
+  background-color: #D3DEF1;
+}
+.HeaderTable td {text-align: center}
