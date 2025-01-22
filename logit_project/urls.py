@@ -14,10 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# logit_project/urls.py
+# logit_project/urls.py
 from django.contrib import admin
-from django.urls import path, include # includeをインポート
+from django.urls import path, include
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('logit_app/', include('logit_app.urls')), # 追加
+    path('admin/', admin.site.urls),
+    path('', include('logit_app.urls')),  # ルート URL に logit_app の urls.py を含める
 ]
