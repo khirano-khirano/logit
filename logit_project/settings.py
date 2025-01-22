@@ -18,7 +18,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['logit.onrender.com']
+ALLOWED_HOSTS = ['logit-q7iv.onrender.com']
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
